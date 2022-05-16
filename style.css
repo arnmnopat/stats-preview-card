@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+  --clr-primary-400: hsl(0, 0%, 100%);
+  --clr-main-paragraph: hsla(0, 0%, 100%, 0.65);
+  --clr-main-stats: hsla(0, 0%, 100%, 0.6);
+
+  --ff-primary: 'Inter', sans-serif;
+  --ff-accent: 'Lexend Deca', sans-serif;
+  --bg-main: hsl(233, 47%, 7%);
+  --bg-card: hsl(244, 38%, 16%);
+  --bg-accent: hsla(277, 64%, 61%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-accent);
+  font-weight: 400;
+  background-color: var(--bg-main);
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  background-color: var(--bg-card);
+  width: 80%;
+  margin: 7em auto;
+  display: flex;
+  /* justify-content: center; */
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+h1{
+  color: var(--clr-primary-400);
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+span {
+  color: hsl(277, 64%, 61%);
+}
+
+.content-card {
+  width: 100%;
+  padding: 3.8em;
+  /* display: flex; */
+
+}
+.content-card p {
+  color: var(--clr-main-paragraph);
+  line-height: 1.5rem;
+  padding: 2.5em 0;
+  padding-right: 4em;
+  font-size: 1rem;
+  letter-spacing: .5px;
+  font-weight: 400;
+}
+
+
+.image-card {
+  width: 100%;
+  padding: 0 auto;
+  display: flex;
+  position: relative;
+  background-color: var(--bg-accent);
+  
+  background-size: cover;
+}
+
+.main-image {
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  object-position: center right;
+  mix-blend-mode: multiply;
+  opacity: .75;
+}
+
+.stats-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3em 0;
+}
+
+.company {
+  color: var(--clr-main-stats);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  line-height: 1.7em;
+}
+
+.stats-1 {
+  color: var(--clr-primary-400);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stats-2 {
+  text-transform: uppercase;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+    .attribution { 
+      color: hsl(228, 45%, 44%);
+      font-size: 11px; text-align: center;   
+}
+
+    .attribution a {
+       color: hsl(228, 45%, 44%); 
+}
+
+/* responsiveness */
+
+@media only screen and ( max-width: 600px){
+  img {
+    content: url(images/image-header-mobile.jpg) no-repeat;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: 2.6em auto;
+  }
+
+  .content-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    order: 1;
+    padding: 2em 0;
+    text-align: center;
+  }
+
+  .content-card h1 {
+    font-size: 1.6rem;
+    line-height: 1.4em;
+    align-items: flex-end;
+    margin-top: 1.2em;
+  }
+
+  .content-card p{
+    display: flex;
+    font-size: .8rem;
+    line-height: 1.4em;
+    padding: 1em 2em;
+  }
+  
+  .stats-card {
+    display: flex;
+    flex-direction: row;
+    padding: 2.6em;
+  }
+
+  .company {
+    line-height: 1.4em;
+  }
+  .stats-1 {
+    font-size: 1.3rem;
+  }
+
+  .stats-2 {
+    font-size: .8rem;
+  }
+  .image-card {
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+@media only screen and ( max-width: 400px){
+  img {
+    content: url(images/image-header-mobile.jpg) no-repeat;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 3em auto;
+  }
+
+  .content-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    order: 1;
+    padding: 1em 0;
+    text-align: center;
+  }
+
+  .content-card h1 {
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    letter-spacing: .1em;
+    align-items: flex-end;
+   padding-left: 19px;
+   margin-top: .6em;
+  }
+
+  .content-card p{
+    display: flex;
+    font-size: .6rem;
+    line-height: 1.6em;
+    text-align: center;
+    padding-left: 4em;
+  }
+  
+  .stats-card {
+    display: flex;
+    flex-direction: column;
+    padding: .1em;
+  }
+
+  .company {
+    line-height: 1.2em;
+    padding: .5em;
+  }
+  .stats-1 {
+    font-size: 1rem;
+  }
+
+  .stats-2 {
+    font-size: .6rem;
+  }
+  .image-card {
+    width: 100%;
+    height: 27vh;
+  }
+}
